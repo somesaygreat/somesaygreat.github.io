@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Daniel Good — poet based in Victoria, British Columbia.">
+  <title>Daniel Good</title>
+  <style>
+    @font-face {
+      font-family: "iAWriterMono";
+      src: url("https://cdn.jsdelivr.net/gh/iaolo/iA-Fonts/iA%20Writer%20Mono/Webfonts/iAWriterMonoS-Regular.woff2") format("woff2");
+      font-weight: 400;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "iAWriterMono";
+      src: url("https://cdn.jsdelivr.net/gh/iaolo/iA-Fonts/iA%20Writer%20Mono/Webfonts/iAWriterMonoS-Bold.woff2") format("woff2");
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    @keyframes bgShift {
+      0%   { background-color: hsl(18, 52%, 93%); }
+      16%  { background-color: hsl(155, 32%, 92%); }
+      33%  { background-color: hsl(215, 40%, 93%); }
+      50%  { background-color: hsl(270, 33%, 93%); }
+      66%  { background-color: hsl(48, 47%, 92%); }
+      83%  { background-color: hsl(340, 36%, 93%); }
+      100% { background-color: hsl(18, 52%, 93%); }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      animation: bgShift 38s ease-in-out infinite;
+      font-family: "iAWriterMono", "Menlo", "Courier New", monospace;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      letter-spacing: 0.01em;
+      color: #000;
+      min-height: 100vh;
+    }
+
+    .doc {
+      max-width: 65ch;
+      padding: 2.8rem 2.5rem;
+    }
+
+    .name {
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 1.1rem;
+    }
+
+    .intro {
+      margin-bottom: 2.8rem;
+      max-width: 55ch;
+      color: rgba(0, 0, 0, 0.75);
+    }
+
+    .work-list {
+      list-style: none;
+      margin-bottom: 3rem;
+    }
+
+    .work-list li {
+      padding: 0.15rem 0.4rem;
+      margin: 0 -0.4rem;
+      border-radius: 2px;
+      transition: background 0.1s ease;
+    }
+
+    .work-list li:nth-child(1):hover { background: rgba(255, 221, 87, 0.55); }
+    .work-list li:nth-child(2):hover { background: rgba(152, 230, 200, 0.55); }
+    .work-list li:nth-child(3):hover { background: rgba(255, 175, 168, 0.55); }
+    .work-list li:nth-child(4):hover { background: rgba(185, 170, 255, 0.55); }
+    .work-list li:nth-child(5):hover { background: rgba(140, 210, 255, 0.55); }
+
+    .row {
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      gap: 0.5em;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .left-label {
+      flex-shrink: 0;
+      color: rgba(0, 0, 0, 0.45);
+      white-space: nowrap;
+    }
+
+    .dashes {
+      flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    .dashes::after {
+      content: "————————————————————————————————————————————————————————————————";
+    }
+
+    .piece-title {
+      flex-shrink: 0;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+
+    .site-footer {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 0.5rem;
+    }
+
+    #contact-link {
+      color: #000;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      padding: 0.15rem 0.35rem;
+      margin: 0 -0.35rem;
+      border-radius: 2px;
+      transition: background 0.1s ease;
+      cursor: pointer;
+    }
+
+    #contact-link:hover {
+      background: rgba(185, 170, 255, 0.55);
+    }
+  </style>
+</head>
+<body>
+  <div class="doc">
+    <p class="name">Daniel Good</p>
+    <p class="intro">Writer whose home is the traditional and unceded territory of the lək̓ʷəŋən speaking peoples, today known as the Esquimalt and Songhees Nations — the place settlers call Victoria, British Columbia.</p>
+    <ul class="work-list">
+      <li>
+        <a class="row" href="https://www.malahatreview.ca/issues/235.html" target="_blank" rel="noopener">
+          <span class="left-label">The Malahat Review</span>
+          <span class="dashes"></span>
+          <span class="piece-title">Day Out</span>
+        </a>
+      </li>
+      <li>
+        <a class="row" href="https://ojs.library.dal.ca/dalhousiereview/issue/view/1067" target="_blank" rel="noopener">
+          <span class="left-label">The Dalhousie Review</span>
+          <span class="dashes"></span>
+          <span class="piece-title">Lowellian Sonnet</span>
+        </a>
+      </li>
+      <li>
+        <a class="row" href="https://www.malahatreview.ca/issues/231.html" target="_blank" rel="noopener">
+          <span class="left-label">The Malahat Review</span>
+          <span class="dashes"></span>
+          <span class="piece-title">Science Fiction</span>
+        </a>
+      </li>
+    </ul>
+    <div class="site-footer">
+      <a id="contact-link" href="#">Contact</a>
+    </div>
+  </div>
+
+  <script>
+    // Email assembled at runtime — not visible as plain text in page source
+    const u = "somesaygreat";
+    const d = "proton.me";
+    const link = document.getElementById("contact-link");
+    link.href = "mailto:" + u + "@" + d;
+  </script>
+</body>
+</html>
